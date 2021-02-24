@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "241e2d6e-9071-48da-b44f-881e8d76c9ee",
+		"name": "Go inventoryservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/products/192",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"192"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"manufacturer\": \"Johns-Jenkins\",\r\n    \"sku\": \"p5z343vdS\",\r\n    \"upc\": \"939581000000\",\r\n    \"pricePerUnit\": \"10\",\r\n    \"quantityOnHand\": 1,\r\n    \"productName\": \"sticky note\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Manufacturer\": \"Shawn Zhang\",\r\n        \"Sku\": \"q0L657ys8\",\r\n        \"Upc\": \"111730000001\",\r\n        \"PricePerUnit\": \"200\",\r\n        \"QuantityOnHand\": 100,\r\n        \"ProductName\": \"game\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/products/191",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"191"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload receipt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "receipt",
+							"type": "file",
+							"src": "/C:/Users/shawnzxx/Desktop/receipt-test.txt.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/receipts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"receipts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get receipts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/receipts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"receipts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download receipt by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/receipts/receipt-test.txt",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"receipts",
+						"receipt-test.txt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
